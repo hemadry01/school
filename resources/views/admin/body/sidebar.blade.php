@@ -19,14 +19,21 @@
       <!-- sidebar menu-->
       <ul class="sidebar-menu" data-widget="tree">
 
-		<li>
+		    <li>
           <a href="index.html">
             <i data-feather="pie-chart"></i>
-			<span>Dashboard</span>
+			      <span>Dashboard</span>
           </a>
         </li>
 
-        <li class="treeview">
+        <li>
+          <a href="{{route('parents.index')}}">
+            <i data-feather="pie-chart"></i>
+			      <span>Parents</span>
+          </a>
+        </li>
+
+        {{-- <li class="treeview">
           <a href="#">
             <i data-feather="message-circle"></i>
             <span>Application</span>
@@ -38,7 +45,7 @@
             <li><a href="chat.html"><i class="ti-more"></i>Chat</a></li>
             <li><a href="calendar.html"><i class="ti-more"></i>Calendar</a></li>
           </ul>
-        </li>
+        </li> --}}
 
         <li class="treeview">
           <a href="#">

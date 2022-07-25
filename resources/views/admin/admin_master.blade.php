@@ -34,7 +34,7 @@
   @include('admin.body.footer')
 
   <!-- Control Sidebar -->
- 
+
   <!-- /.control-sidebar -->
 
   <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
@@ -52,8 +52,15 @@
 	<script src="{{asset('../assets/vendor_components/apexcharts-bundle/dist/apexcharts.js')}}"></script>
 
 	<!-- Sunny Admin App -->
+
+    <script src="{{asset('../assets/vendor_components/datatable/datatables.min.js')}}"></script>
+	<script src="{{asset('backend/js/pages/data-table.js')}}"></script>
+    
+
 	<script src="{{asset('backend/js/template.js')}}"></script>
 	<script src="{{asset('backend/js/pages/dashboard.js')}}"></script>
+
+
 
 
 </body>

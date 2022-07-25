@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\ParentsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +18,5 @@ Route::get('/', function () {
     //return view('admin.auth.login');
     return view('admin.index');
 });
+
+Route::resource("parents",ParentsController::class);
