@@ -16,16 +16,16 @@ class CreateParentsTable extends Migration
         Schema::create('parents', function (Blueprint $table) {
             $table->id();
             $table->string('guardian_name');
-            $table->string('father_name');
-            $table->string('mother_name');
-            $table->string('father_profession');
-            $table->string('mother_profession');
-            $table->string('email')->unique();
+            $table->string('father_name')->nullable();
+            $table->string('mother_name')->nullable();
+            $table->string('father_profession')->nullable();
+            $table->string('mother_profession')->nullable();
+            $table->string('email')->unique()->nullable();
             $table->string('phone');
             $table->string('address');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('user_name');
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->timestamps();
         });
     }

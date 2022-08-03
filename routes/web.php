@@ -20,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::resource("parents",ParentsController::class);
+Route::get("parent/view/{parent}",[ParentsController::class,"parentView"])->name("parent.view");

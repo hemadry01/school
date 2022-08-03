@@ -41,13 +41,13 @@
 
                                 <img width="60" src="{{asset($parent->image)}}" alt="image">
                               </td>
-                              <td>{{$parent->father_name}}</td>
+                              <td>{{$parent->guardian_name}}</td>
                               <td>{{$parent->email}}</td>
                               <td>{{$parent->phone}}</td>
                               <td>
-                                <a href="" class="btn btn-success btn-xs mrg" data-placement="top" data-toggle="tooltip" data-original-title="View"><i class="fa fa-check-square-o"></i></a>
-                                <a href="" class="btn btn-warning btn-xs mrg" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>
-                                <a href="" onclick="return confirm('you are about to delete a record. This cannot be undone. are you sure?')" class="btn btn-danger btn-xs mrg" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
+                                <a href="{{route("parent.view",$parent->id)}}" class="btn btn-success btn-xs mrg" data-placement="top" data-toggle="tooltip" data-original-title="View"><i class="fa fa-check-square-o"></i></a>
+                                <a href="{{route("parents.edit",$parent->id)}}" class="btn btn-warning btn-xs mrg" data-placement="top" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>
+                                <a href="#" class="btn btn-danger btn-xs mrg" data-placement="top" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash-o"></i></a>
                               </td>
 
                           </tr>

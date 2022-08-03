@@ -28,25 +28,25 @@ class ParentRequest extends FormRequest
                 "required"
             ],
 
-            "father_name"=>[
-                "required"
-            ],
+            // "father_name"=>[
+            //     "required"
+            // ],
 
-            "mother_name"=>[
-                "required"
-            ],
+            // "mother_name"=>[
+            //     "required"
+            // ],
 
-            "father_profession"=>[
-                "required"
-            ],
+            // "father_profession"=>[
+            //     "required"
+            // ],
 
-            "mother_profession"=>[
-                "required"
-            ],
+            // "mother_profession"=>[
+            //     "required"
+            // ],
 
-            "email"=>[
-                "required"
-            ],
+            // "email"=>[
+            //     "required"
+            // ],
 
             "phone"=>[
                 "required",
@@ -57,10 +57,10 @@ class ParentRequest extends FormRequest
                 "required"
             ],
 
-            "image"=>[
-                'image:jpg, jpeg, png',
-                'max:512',
-            ],
+            // "image"=>[
+            //     'image:jpg, jpeg, png',
+            //     'max:512',
+            // ],
 
             "user_name"=>[
                 "required",
@@ -68,10 +68,10 @@ class ParentRequest extends FormRequest
                 "min:4"
             ],
 
-            "password"=>[
-                "required",
-                "min:8"
-            ],
+            // "password"=>[
+            //     "required",
+            //     "min:8"
+            // ],
         ];
     }
 }
