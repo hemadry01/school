@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\ParentsController;
+use App\Http\Controllers\Backend\TeachersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,3 +22,6 @@ Route::get('/', function () {
 
 Route::resource("parents",ParentsController::class);
 Route::get("parent/view/{parent}",[ParentsController::class,"parentView"])->name("parent.view");
+
+Route::resource("teachers",TeachersController::class)->except('destroy');
+Route::get("/delete/{id}",[TeachersController::class,"deleteTeacher"])->name("delete.teacher");
