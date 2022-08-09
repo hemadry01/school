@@ -61,7 +61,7 @@ class TeachersController extends Controller
             "password"=>Hash::make($request->get("password")),
         ]);
 
-        $token = $teacher->createToken("create new token")->plainTextToken;
+        $token = $teacher->createToken("create teacher token")->plainTextToken;
 
         return redirect()->route("teachers.index");
     }
@@ -119,24 +119,25 @@ class TeachersController extends Controller
         return redirect()->back()->withInput();
     }
 
-    // /**
-    //  * Remove the specified resource from storage.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function destroy($id)
-    // {
-    //     //
-    // }
-
-    public function deleteTeacher($id){
-        $teacher=Teachers::find($id);
-        //dd($teacher);
-        if($teacher->delete()){
-
-            Storage::delete("photo");
-            return redirect()->back();
-        }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
     }
+
+//     public function deleteTeacher($id){
+//         $teacher=Teachers::find($id);
+//         //dd($teacher);
+//         if($teacher->delete()){
+
+//             Storage::delete($teacher->photo);
+//             return redirect()->back();
+//         }
+//         return redirect()->back()->withInput()->with("ERROR",__("Failed to store data"));
+//    }
 }

@@ -38,7 +38,14 @@
               <i data-feather="pie-chart"></i>
                     <span>Teacher</span>
             </a>
-          </li>
+        </li>
+
+        <li>
+            <a href="{{route('users.index')}}">
+              <i data-feather="pie-chart"></i>
+                    <span>User</span>
+            </a>
+        </li>
 
         {{-- <li class="treeview">
           <a href="#">

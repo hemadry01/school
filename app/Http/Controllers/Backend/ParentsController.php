@@ -67,7 +67,7 @@ class ParentsController extends Controller
 
 
 
-        $token = $parent->createToken("create new token")->plainTextToken;
+        $token = $parent->createToken("create parent token")->plainTextToken;
 
         $response=[
             "parrent"=>$parent,
@@ -140,7 +140,7 @@ class ParentsController extends Controller
     public function destroy(Parents $parent)
     {
         dd($parent);
-        
+
     }
 
     public function parentView( Parents $parent){
