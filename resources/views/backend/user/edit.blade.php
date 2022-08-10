@@ -11,7 +11,7 @@
             <div class="box">
                 <div class="box-header with-border">
                   <h5 class="box-title">Update User Information</h5>
-                  <a href="{{route("teachers.index")}}" style="float: right" class="btn btn-rounded btn-success mb-5">User's List</a>
+                  <a href="{{route("users.index")}}" style="float: right" class="btn btn-rounded btn-success mb-5">User's List</a>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">

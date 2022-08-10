@@ -24,4 +24,8 @@ class Teachers extends Model
         "user_name",
         "password",
     ];
+
+    public function classes(){
+        return $this->hasMany(Classes::class);
+    }
 }

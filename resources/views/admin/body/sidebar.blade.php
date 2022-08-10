@@ -47,19 +47,23 @@
             </a>
         </li>
 
-        {{-- <li class="treeview">
+        <li class="treeview">
           <a href="#">
             <i data-feather="message-circle"></i>
-            <span>Application</span>
+            <span>Academic</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-right pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="chat.html"><i class="ti-more"></i>Chat</a></li>
-            <li><a href="calendar.html"><i class="ti-more"></i>Calendar</a></li>
+            <li><a href="{{route("classes.index")}}"><i class="ti-more"></i>Class</a></li>
+            <li><a href="calendar.html"><i class="ti-more"></i>Section</a></li>
+            <li><a href="calendar.html"><i class="ti-more"></i>Subject</a></li>
+            <li><a href="calendar.html"><i class="ti-more"></i>Syllabus</a></li>
+            <li><a href="calendar.html"><i class="ti-more"></i>Assignment</a></li>
+            <li><a href="calendar.html"><i class="ti-more"></i>Routine</a></li>
           </ul>
-        </li> --}}
+        </li>
 
         <li class="treeview">
           <a href="#">

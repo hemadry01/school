@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\ClassesController;
 use App\Http\Controllers\Backend\ParentsController;
 use App\Http\Controllers\Backend\TeachersController;
 use App\Http\Controllers\Backend\UsersController;
@@ -28,3 +29,5 @@ Route::resource("teachers",TeachersController::class);
 
 Route::resource("users",UsersController::class)->except('destory');
 Route::get("/delete/{id}",[UsersController::class,"deleteUser"])->name("delete.user");
+
+Route::resource("classes",ClassesController::class);
