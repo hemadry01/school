@@ -20,4 +20,8 @@ class Classes extends Model
 
         return $this->belongsTo(Teachers::class);
     }
+
+    public function section(){
+        return $this->hasMany(Section::class);
+    }
 }

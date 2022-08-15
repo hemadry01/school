@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\ClassesController;
 use App\Http\Controllers\Backend\ParentsController;
+use App\Http\Controllers\Backend\SectionController;
 use App\Http\Controllers\Backend\TeachersController;
 use App\Http\Controllers\Backend\UsersController;
 use Illuminate\Support\Facades\Route;
@@ -31,3 +32,5 @@ Route::resource("users",UsersController::class)->except('destory');
 Route::get("/delete/{id}",[UsersController::class,"deleteUser"])->name("delete.user");
 
 Route::resource("classes",ClassesController::class);
+Route::resource("sections",SectionController::class);
+Route::get("section/filter",[SectionController::class,"sectionFilter"])->name("section.filter");

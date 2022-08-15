@@ -28,4 +28,8 @@ class Teachers extends Model
     public function classes(){
         return $this->hasMany(Classes::class);
     }
+
+    public function section(){
+        return $this->hasMany(Section::class);
+    }
 }
