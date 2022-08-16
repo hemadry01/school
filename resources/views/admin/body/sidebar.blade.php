@@ -58,7 +58,7 @@
           <ul class="treeview-menu">
             <li><a href="{{route("classes.index")}}"><i class="ti-more"></i>Class</a></li>
             <li><a href="{{route("sections.index")}}"><i class="ti-more"></i>Section</a></li>
-            <li><a href="calendar.html"><i class="ti-more"></i>Subject</a></li>
+            <li><a href="{{route("subjects.index")}}"><i class="ti-more"></i>Subject</a></li>
             <li><a href="calendar.html"><i class="ti-more"></i>Syllabus</a></li>
             <li><a href="calendar.html"><i class="ti-more"></i>Assignment</a></li>
             <li><a href="calendar.html"><i class="ti-more"></i>Routine</a></li>

@@ -5,23 +5,7 @@
 <div class="content-wrapper">
     <div class="container-full">
 		<!-- Content Header (Page header) -->
-		<div class="content-header">
-			<div class="d-flex align-items-center">
-				<div class="mr-auto">
-					<h3 class="page-title">Bootstrap Tables</h3>
-					<div class="d-inline-block align-items-center">
-						<nav>
-							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
-								<li class="breadcrumb-item" aria-current="page">Tables</li>
-								<li class="breadcrumb-item active" aria-current="page">Basic Tables</li>
-							</ol>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-
+		
 		<!-- Main content -->
 		<section class="content">
 
@@ -29,30 +13,11 @@
 
 			<div class="col-12">
 			  <div class="box">
-				<div class="box-header with-border">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="form-group">
-                                <label class="block" for="class_id">Class<span class="text-danger">*</span></label>
-                                    <div class="controls">
-                                        <select name="class_id" id="class_id" class="form-control">
-                                            <option value="">Select Class</option>
-                                            @foreach ($classes as $id=>$value)
-                                               <option value="{{$id}}">{{$value}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                        </div><!-- End Col md-6 -->
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <div class="controls">
-                                    <a href="{{route("sections.create")}}" style="float: right" class="btn btn-rounded btn-success mb-5">Add Section</a>
-                                </div>
-                            </div>
-                        </div><!-- End Col md-6 -->
 
-				</div>
+                <div class="box-header with-border">
+                    <h3 class="box-title">Section</h3>
+                    <a href="{{route("sections.create")}}" style="float: right" class="btn btn-rounded btn-success mb-5">Add Section</a>
+                  </div>
 				<!-- /.box-header -->
 				<div class="box-body">
 					<div class="table-responsive-sm">

@@ -3,16 +3,13 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Models\Classes;
-use App\Models\Section;
 use App\Models\Teachers;
-//use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\SectionRequest;
-use Illuminate\Support\Facades\Request;
+use App\Http\Requests\SubjectRequest;
+use App\Models\Subject;
 
-
-
-class SectionController extends Controller
+class SubjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,9 +18,8 @@ class SectionController extends Controller
      */
     public function index()
     {
-        $data["classes"] = Classes::pluck("class_name", "id");
-        $data["sections"]=Section::all();
-        return view("backend.section.index", $data);
+        $data["subjects"]=Subject::all();
+        return view("backend.subject.index",$data);
     }
 
     /**
@@ -36,24 +32,25 @@ class SectionController extends Controller
         $data["teachers"] = Teachers::pluck("name", "id");
         $data["classes"] = Classes::pluck("class_name", "id");
 
-        return view("backend.section.create", $data);
+        return view("backend.subject.create",$data);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  App\Http\Requests\SectionRequest  $request
+     * @param  App\Http\Requests\SubjectRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(SectionRequest $request)
+    public function store(SubjectRequest $request)
     {
-        $section = new Section();
-        $section = $section->insert($request->only($section->getFillable()));
+        $subject=new Subject();
 
-        if (!empty($section)) {
-            return redirect()->route("sections.index");
+        $sub=$subject->insert($request->only($subject->getFillable()));
+
+        if(!empty($sub)){
+            return redirect()->route("subjects.index")->with("");
         }
-        return redirect()->back()->withInput();
+        return redirect()->back();
     }
 
     /**
@@ -73,13 +70,13 @@ class SectionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Section $section)
+    public function edit(Subject $subject)
     {
-        $data["sections"] = $section;
+        $data["subjects"] = $subject;
         $data["teachers"] = Teachers::pluck("name", "id");
         $data["classes"] = Classes::pluck("class_name", "id");
 
-        return view("backend.section.edit", $data);
+        return view("backend.subject.edit",$data);
     }
 
     /**
@@ -89,18 +86,14 @@ class SectionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(SectionRequest $request, Section $section)
+    public function update(SubjectRequest $request, Subject $subject)
     {
-        $section = $section->update($request->only($section->getFillable()));
+        $subject = $subject->update($request->only($subject->getFillable()));
 
-        if (!empty($section)) {
-            return redirect()->route("sections.index")->with("");
+        if (!empty($subject)) {
+            return redirect()->route("subjects.index")->with("");
         }
         return redirect()->back()->withInput();
-    }
-
-    public function sectionFilter(Request $request){
-
     }
 
     /**
