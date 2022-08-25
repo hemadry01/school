@@ -61,9 +61,13 @@ class UsersController extends Controller
         ]);
 
         $token=$user->createToken("create user token")->plainTextToken;
+        $response=[
+            "parrent"=>$user,
+            "token"=>$token,
+        ];
 
         //dd($user);
-        return redirect()->route("users.index")->with("seccess");
+        return redirect($response,201)->route("users.index")->with("seccess");
     }
 
     /**

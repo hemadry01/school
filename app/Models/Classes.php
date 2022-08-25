@@ -28,4 +28,8 @@ class Classes extends Model
     public function subject(){
         return $this->hasMany(Subject::class);
     }
+
+    public function syllabus(){
+        return $this->hasMany(Syllabus::class);
+    }
 }

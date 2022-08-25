@@ -63,7 +63,12 @@ class TeachersController extends Controller
 
         $token = $teacher->createToken("create teacher token")->plainTextToken;
 
-        return redirect()->route("teachers.index");
+        $response=[
+            "parrent"=>$teacher,
+            "token"=>$token,
+        ];
+
+        return redirect($response,201)->route("teachers.index");
     }
 
     /**

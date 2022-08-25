@@ -73,7 +73,7 @@ class ParentsController extends Controller
             "parrent"=>$parent,
             "token"=>$token,
         ];
-        return redirect()->route("parents.index")->with([$response,"success"]);
+        return redirect($response,201)->route("parents.index")->with("");
     }
 
     /**
